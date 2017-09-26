@@ -1,0 +1,71 @@
+<head>
+<style>
+
+    body {
+        margin: 10%;
+    }
+
+    html h1 {
+        font-family: 'Playfair Display', serif;
+    }
+
+    .avatar {
+        float: left;
+        margin: 0 40px 20px 0;
+    }
+        .avatar img {
+            max-width: 150px;
+            max-height: 150px;
+            border-radius: 75px;
+        }
+
+    .content {
+        float: left;
+        font-size: 16px;
+        width: 600px;
+        /*margin-bottom: 80px;*/
+    }
+    .titlecontent {
+        float: left;
+        font-size: 16px;
+        width: 500px;
+        margin-bottom: 50px;
+    }
+    .title {
+        font-size: 48px;
+        font-weight: normal;
+        line-height: 1;
+    }
+
+
+</style>
+</head>
+
+
+{{ partial "header" . }}
+
+<main>
+
+    <div class="avatar">
+        <img src="img/avatar.jpg" alt="Avatar">
+    </div>
+
+    <div class="titlecontent" align="left">
+        <h1 class="title">Joey Carter</h1>
+
+        <p>
+            PhD Student in Physics<br>
+            University of Toronto
+        </p>
+    </div>
+
+    <div class="content" align="left">
+
+        <!-- Note that the content for index.html, as a sort of list page, will pull from content/_index.md -->
+        {{ .Content }}
+
+    </div>
+
+</main>
+
+{{ partial "footer" . }}

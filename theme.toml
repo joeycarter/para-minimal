@@ -1,0 +1,12 @@
+name = "Para-Minimal"
+license = "MIT"
+licenselink = "https://github.com/joeycarter/para-minimal/blob/master/LICENSE"
+description = "Personal blog theme powered by Hugo"
+homepage = "http://github.com/joeycarter/para-minimal/"
+tags = ["blog", "minimal", "personal", "responsive"]
+features = ["responsive"]
+min_version = "0.24.1"
+
+[author]
+    name = "Joey Carter"
+    homepage = "https://joeycarter.github.io/"
