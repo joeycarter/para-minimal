@@ -69,7 +69,24 @@ a:hover {
 }
 
 .item-tag {
+    background-color: white;
+    border: 1px solid var(--accent);
+    color: var(--accent);
+    padding: 2px 5px;
+    border-radius: 5px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 12px;
+    margin: 4px 2px;
+    -webkit-transition-duration: 0.4s; /* Safari */
+    transition-duration: 0.4s;
+    cursor: pointer;
+}
+
+.item-tag:hover {
     background-color: var(--accent);
+    color: white;
 }
 
 /*navigation bar icons*/
