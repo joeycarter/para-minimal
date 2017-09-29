@@ -16,7 +16,7 @@
     {{ if eq .Type "info"}}
         <h2>{{ .Title }}</h2>
     {{ else }}
-        {{ .Date.Format (.Site.Params.dateFormat | default "January 2, 2006") | $.Scratch.Set "date" }}
+        {{ .Date.Format (.Site.Params.dateFormat | default "Jan 2, 2006") | $.Scratch.Set "date" }}
         {{ with .Description }} {{ $.Scratch.Set "description" . }} {{ end }}
 
         <h4><a href="{{ .Scratch.Get "link" }}">{{ .Title }}</a> &middot; {{ $.Scratch.Get "date" }}</h4>
