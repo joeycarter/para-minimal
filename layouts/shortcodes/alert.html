@@ -1,0 +1,18 @@
+{{ $.Scratch.Add "alerttype" (.Get 0) }}
+
+<div class="alert alert-{{ .Get 0 }}">
+    {{ if eq ($.Scratch.Get "alerttype") "info" }}
+        <i class="fa fa-info-circle" aria-hidden="true"></i>
+        &nbsp;
+    {{ else if eq ($.Scratch.Get "alerttype") "success" }}
+        <i class="fa fa-check" aria-hidden="true"></i>
+        &nbsp;
+    {{ else if eq ($.Scratch.Get "alerttype") "warning" }}
+        <i class="fa fa-exclamation-triangle" aria-hidden="true"></i>
+        &nbsp;
+    {{ else if eq ($.Scratch.Get "alerttype") "danger" }}
+        <i class="fa fa-times-circle" aria-hidden="true"></i>
+        &nbsp;
+    {{ end }}
+    {{ .Inner }}
+</div>
