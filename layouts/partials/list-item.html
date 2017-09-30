@@ -17,12 +17,17 @@
         <h2>{{ .Title }}</h2>
     {{ else }}
         {{ .Date.Format (.Site.Params.dateFormat | default "Jan 2, 2006") | $.Scratch.Set "date" }}
-        {{ with .Description }} {{ $.Scratch.Set "description" . }} {{ end }}
 
-        <h4><a href="{{ .Scratch.Get "link" }}">{{ .Title }}</a> &middot; {{ $.Scratch.Get "date" }}</h4>
-        <h5>{{ $.Scratch.Get "description" }}</h5>
-        <i class="fa fa-tags" aria-hidden="true"></i>
-        {{ range .Params.tags }} <a href="/tags/{{ . }}"><item-tag class="item-tag">{{ . }}</item-tag></a> {{ end }}
+        <h3 align="left"><a href="{{ .Scratch.Get "link" }}">{{ .Title }}</a></h3>
+        <h4 align="left">
+            <span class="text-info">{{ $.Scratch.Get "date" }}</span>
+            &nbsp; <!-- &middot; --> &nbsp;
+            <i class="fa fa-tags text-muted" aria-hidden="true"></i>
+            {{ range .Params.tags }} <a href="/tags/{{ . }}"><item-tag class="item-tag">{{ . }}</item-tag></a> {{ end }}
+        </h4>
+        <div align="left" class="text-muted">
+            <em>{{ .Description }}</em>
+        </div>
     {{ end }}
 
 </div>
