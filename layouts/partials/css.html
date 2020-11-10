@@ -1,17 +1,28 @@
 <style>
 
     html body {
-        font-family: {{ .Site.Params.font }}, sans-serif;
+        line-height: 1.7;
+        text-justify: none;
+        font-family: {{ .Site.Params.font }}, serif;
         font-size: {{ .Site.Params.fontsize }};
         background-color: {{ .Site.Params.backgroundColor | default "white" }};
     }
 
+    html h1 {
+        font-family: {{ .Site.Params.headerFont }}, serif;
+    }
+
     html h2 {
-        font-family: 'Playfair Display', serif;
+        font-family: {{ .Site.Params.headerFont }}, serif;
     }
 
     html h3 {
-        font-family: 'Playfair Display', serif;
+        font-family: {{ .Site.Params.headerFont }}, serif;
+    }
+
+    html blockquote {
+        font-style: italic;
+        font-size: larger;
     }
 
     :root {
@@ -28,8 +39,9 @@
 {{ range .Site.Params.css }} <link rel="stylesheet" href="{{ . }}"> {{ end }}
 
 <!-- google fonts -->
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family={{ .Site.Params.font }}:400,700">
-<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Playfair+Display">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family={{ .Site.Params.font }}">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family={{ .Site.Params.headerFont }}">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Lato">
 
 <!-- highlight.js -->
 {{ if .Site.Params.highlight | default false }} <link rel="stylesheet" href="//cdnjs.cloudflare.com/ajax/libs/highlight.js/9.12.0/styles/{{ .Site.Params.highlightStyle | default "default" }}.min.css"> {{ end }}

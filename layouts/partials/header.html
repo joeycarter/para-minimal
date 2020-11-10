@@ -32,7 +32,7 @@
                 <div class="collapse navbar-collapse">
 
                     {{ if .Site.Menus.main }}
-                        <ul class="nav navbar-nav">
+                        <ul style="font-size:120%; font-family:Lato;" class="nav navbar-nav">
                             {{ range sort .Site.Menus.main }}
                                 <li><a href="{{ .URL }}">{{ .Name }}</a></li>
                             {{ end }}
