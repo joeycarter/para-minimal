@@ -1,11 +1,20 @@
 <style>
 
+    html {
+        /* Always show scroll bar to prevent content shift between pages */
+        overflow-y: scroll;
+    }
+
     html body {
         line-height: 1.7;
         text-justify: none;
         font-family: {{ .Site.Params.font }}, serif;
         font-size: {{ .Site.Params.fontsize }};
         background-color: {{ .Site.Params.backgroundColor | default "white" }};
+    }
+
+    html p {
+        padding-bottom: 1ex;
     }
 
     html h1 {
